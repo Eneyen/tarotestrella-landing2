@@ -1,4 +1,3 @@
-actualización
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -86,29 +85,29 @@ const PriceComparison = () => {
 }
 
 const StripeCheckout = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePayment = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-      })
-      
-      const { url } = await response.json()
+      });
+
+      const { url } = await response.json();
       if (url) {
-        window.location.href = url
+        window.location.href = url;
       }
     } catch (error) {
-      console.error('Error:', error)
-      alert('Error al procesar el pago. Por favor, intentalo de nuevo.')
-      setIsLoading(false)
+      console.error('Error:', error);
+      alert('Error al procesar el pago. Por favor, intentalo de nuevo.');
+      setIsLoading(false);
     }
-  }
-}
+  };
+  
   return (
     <div className="checkout-section" style={{ textAlign: 'center' }}>
       <PriceComparison />
@@ -129,7 +128,7 @@ const StripeCheckout = () => {
               display: 'inline-block', 
               marginRight: '10px',
               animation: 'spin 1s linear infinite'
-            }}>⌟</span>
+            }}>&#x2B6F;</span>
             Procesando...
           </>
         ) : (
@@ -149,8 +148,8 @@ const StripeCheckout = () => {
         &nbsp;&nbsp;pagarías por una consulta presencial (25-65€)
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default function Home() {
   return (
