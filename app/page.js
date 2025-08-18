@@ -107,7 +107,7 @@ const StripeCheckout = () => {
       setIsLoading(false)
     }
   }
- }
+ 
   return (
     <div className="checkout-section" style={{ textAlign: 'center' }}>
       <PriceComparison />
