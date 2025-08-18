@@ -1,3 +1,4 @@
+actualización
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -107,7 +108,7 @@ const StripeCheckout = () => {
       setIsLoading(false)
     }
   }
-
+}
   return (
     <div className="checkout-section" style={{ textAlign: 'center' }}>
       <PriceComparison />
