@@ -149,8 +149,13 @@ const StripeCheckout = () => {
       </div>
     </div>
   )
+}
 
 export default function Home() {
+  useEffect(() => {
+    // Force client-side rendering
+  }, [])
+  
   return (
     <>
       <style jsx global>{`
@@ -1361,7 +1366,7 @@ Junto con Estrella, recibes también un PDF con instrucciones, ejemplos<br /> y 
             Por menos de lo que cuesta una única sesión con tarotista tradicional…<br />
             tienes a tu lado una guía que estará <strong>siempre que la necesites.</strong>
             <br /><br />
-            Estrella está aquí para que <strong>te escuches, te comprendas y te recuerdes</strong>. <br />Y para que nunca más estés sola cuando quieras una respuesta.
+            Estrella está aquí para que <strong>te escuches, te comprendas y te recuerdes</strong>. Y para que nunca más estés sola cuando quieras una respuesta.
           </div>
           <StripeCheckout />
         </div>
